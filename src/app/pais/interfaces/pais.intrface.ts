@@ -4,6 +4,7 @@ export interface Country {
     cca2:         string;
     ccn3:         string;
     cca3:         string;
+    alpha2Code:   string;
     cioc:         string;
     independent:  boolean;
     status:       string;

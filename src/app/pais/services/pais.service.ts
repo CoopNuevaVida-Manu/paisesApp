@@ -10,6 +10,8 @@ import { Country } from '../interfaces/pais.intrface';
 export class PaisService {
 
   private _urlApi : string = 'https://restcountries.com/v3.1';
+  private _urlApi2 : string = 'https://restcountries.com/v2';
+  
 
   constructor(private http: HttpClient) { }
 
@@ -26,4 +28,9 @@ export class PaisService {
     const url = `${this._urlApi}/alpha/${id}`;
     return this.http.get<Country>(url)
   }
+  buscaRegion( termino: string): Observable<Country[]>{
+    const url = `${this._urlApi2}/regionalbloc/${termino}`;
+    return this.http.get<Country[]>(url)
+  }
+  
 }
