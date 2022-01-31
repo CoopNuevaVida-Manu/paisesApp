@@ -22,17 +22,15 @@ export class PorPaisComponent  {
 
     this.hayError = false;
     this.termino = termino;
+    
     this.paisService.buscaPais(termino).subscribe(pais => {
       this.paises = pais;
       console.log(pais);
     }, error =>{
       this.hayError = true;
+      this.paises = [];
     });
-    console.log(this.termino);
   }
 
-  sugerencias(terino: string){
-    this.hayError = false;
-  }
 
 }

@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col">
-        <app-pais-input (onEnter)="buscar( $event )" (onDebonuce)="sugerencias($event)"></app-pais-input>
+        <app-pais-input (onEnter)="buscar( $event )" placeholder="Buscar País"></app-pais-input>
     </div>
 </div>
 
@@ -15,10 +15,6 @@
 
 <div *ngIf="paises.length > 0" class="row">
     <div class="col">
-
-        
         <app-pais-tabla [paises]="paises"></app-pais-tabla>
-
-
     </div>
 </div>
